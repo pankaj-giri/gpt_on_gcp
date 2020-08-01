@@ -6,8 +6,9 @@ fastapi
 tensorflow==1.15.0
 gpt-2-simple==0.7.1
 
-The python runtime with the service is packaged into a docker image and pushed into Google Cloud registry.
-After pushing this can be
+# Steps
+
+The python runtime with the service is packaged into a docker image and pushed into Google Cloud registry and finally deployed.
 
 This file ```gpt2_service.py``` exposes gpt2 as a Fastapi rest service
 
@@ -49,7 +50,10 @@ gcloud run deploy --image gcr.io/cobalt-baton-282213/nlg:gpt2_service --platform
 
 To access this service please check 
 
-https://nlg-tkclnkiika-de.a.run.app
+https://nlg-tkclnkiika-de.a.run.app/docs
+
+This opens up a Swagger UI, and you could have a go at the service, by clicking ```get``` on  ```​/predict​/{prefix}``` api.
+Then click ```Try it out```, and then write something on the ```prefix``` text box and click execute.
 
 
 
